@@ -83,3 +83,7 @@ symlinks are needed; shared `config.yml` supplies Molecule's role search path.
 - `extensions/molecule/default/` contains only `molecule.yml`, hello-world `converge.yml`, and `verify.yml`.
 - `ansible.cfg` and `Makefile` configure collection resolution and root-level test commands.
 - `devfile.yaml` defines development commands for editors that support Devfiles.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
