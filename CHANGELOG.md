@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added the MIT license text to the collection template.
+
 ## 0.1.0
 
 - Initial collection scaffold with an example role and a hello-world Molecule
