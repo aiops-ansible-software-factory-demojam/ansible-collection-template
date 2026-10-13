@@ -87,3 +87,13 @@ symlinks are needed; shared `config.yml` supplies Molecule's role search path.
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## Test guests
+
+Run `make molecule` in the demo sandbox to test every scenario. The sandbox
+selects the backend: CNV uses CentOS Stream 10; AWS uses pinned RHEL 9 and RHEL 10
+images in the demo's public subnet. Both paths use the shared provisioner.
+Common inventory is under `extensions/molecule/utils/inventory/base/`, with
+host definitions in the `kubevirt/` and `aws/` siblings. Keep test credentials
+outside the repository. `make destroy` cleans the saved invocation after an
+interrupted run.
