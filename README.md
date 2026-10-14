@@ -36,6 +36,12 @@ four VMs and 120 GiB of requested disks. AWS uses the sandbox's pinned RHEL 9
 and RHEL 10 images in a provided public subnet, with `t3.medium` instances,
 encrypted 30 GiB gp3 disks and public-IP SSH as `ec2-user`.
 
+Test requirements pin the published `david_igou.molecule_provisioners:0.0.7-alpha`
+release. The sandbox preloads its verified Galaxy artifact. Shared inventory
+maps the mounted profile to the release's `mp_defaults.aws` fields, including
+the expected account and bootstrap-owned security group. Tests retain that group
+and network, and destroy their own guests, disks and generated SSH keys.
+
 The shared provisioner assigns run identities and retains cleanup state in
 Molecule's ephemeral directory. After an interrupted run, use `make destroy`
 from the same sandbox and collection. These tests need the selected backend's
